@@ -16,25 +16,60 @@
 </head>
 
 <body>
- 
-    <!--heading-->
-        <div class="heading text-center my-4">
-            <h1>WebDevEnthusiasts Messenger App</h1>
-
-        </div>    
-    <div class="container d-flex justify-content-center ">
-        <form class="form">
-            <h3 class="form-title text-center">login</h3>
-        <div class="input-group my-4">
-            <input type="email" class="inputData" placeholder="Enter your email">
+    <div class="container">
+    <div class="heading">
+         <!--Rooms-->
+        <div class="input-group">
+            <div class="input-group-prepend ">   
+                <div class="input-group-text">
+                    <h3>Web Enthusiastics Hangout</h3>
+                    <div class="selctroom input-group-append">
+                        <button type="button" class="btn btn-success mx-2 my-3 ">General</button>
+                        <button type="button" class="btn btn-success mx-2 my-3 ">Project</button>
+                        <button type="button" class="btn btn-success mx-2 my-3 ">Info</button>
+                        <button type="button" class="btn btn-success mx-2 my-3" >Links</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="input-group my-4">
-            <input type="password" class="inputData" placeholder="password">
-        </div>
-    
-    <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+     </div>
     </div>
+ <!--Users-->
+    <div class="container mt-5" >
+        <div class="users">
+            <ul class="list-unstyled d-grid gap-4">
+                <li class="border rounded w-25  text-center">user1</li>
+                <li class="border rounded w-25  text-center">user2</li>
+                <li class="border rounded w-25 text-center">user3</li>
+                <li class="border rounded w-25 text-center">user4</li>
+                <li class="border rounded w-25  text-center">user5</li>
+                <li class="border rounded w-25  text-center">user6</li>
+                <li class="border rounded w-25  text-center">user7</li>
+                <li class="border rounded w-25  text-center">user8</li>
+                <li class="border rounded w-25 text-center">user9</li>
+            </ul>
+        </div>
+    </div>   
+<!--chat window-->
+
+<div class="chatWindow container w-75 my-5">
+    <ul class="chat-list list-group">
+        
+    </ul>
+
+ <!--New message input-->
+<div class="newMsg">
+    <div class="input-group">
+    <input type="text" class="form-control" required>
+    <div class="input-group-append">
+    <button type="submit" class="btn btn-primary">Submit</button>
 </div>
+    </div>   
+
+   
+
+
+
+
 </body>
 </html> 
