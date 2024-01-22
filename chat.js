@@ -33,9 +33,11 @@ import { getFirestore ,collection,addDoc,getDocs,onSnapshot} from "https://www.g
         const chat = await addDoc(collectionRef, msg);
       }
 
-      getDocs(){
+       getDocs(){
 
-        onSnapshot((snapshot)=>{
+        const filterChats = query(collectionRef, where(userName,'==',this.subUser),where(room,'==',this.room))
+
+        onSnapshot(filterChats,(snapshot)=>{
             Callback(snapshot)
         })
 
