@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+import { getFirestore ,collection} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyC-q2I2cKK_TuFI5gh2wEvNE-vxTdj80K0",
@@ -13,3 +13,12 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.2/firebase
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+  const db = getFirestore();
+  const collectionRef = collection(db, "chats");
+
+  class Chats {
+    constructor(primaryUser,subUser,room){
+        this.primaryUser=primaryUser,
+        this.subUser=subUser,
+        this.room = room
+    }
