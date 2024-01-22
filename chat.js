@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-import { getFirestore ,collection} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+import { getFirestore ,collection,addDoc,getDocs,onSnapshot} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyC-q2I2cKK_TuFI5gh2wEvNE-vxTdj80K0",
@@ -31,6 +31,14 @@ import { getFirestore ,collection} from "https://www.gstatic.com/firebasejs/10.7
           time: serverTimestamp()
         };
         const chat = await addDoc(collectionRef, msg);
+      }
+
+      getDocs(){
+
+        onSnapshot((snapshot)=>{
+            Callback(snapshot)
+        })
+
       }
 
       updatePrimaryUser(userName){
