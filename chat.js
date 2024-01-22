@@ -32,4 +32,14 @@ import { getFirestore ,collection} from "https://www.gstatic.com/firebasejs/10.7
         };
         const chat = await addDoc(collectionRef, msg);
       }
+
+      updatePrimaryUser(userName){
+        this.primaryUser = userName
+      }
+      updateSubUser(userName2){
+        this.subUser = userName2
+      }
+      updateRoom(selectedroom){
+        this.room = selectedroom
+      }
 }
