@@ -43,6 +43,16 @@ import { getFirestore ,collection,addDoc,getDocs,onSnapshot} from "https://www.g
 
       }
 
+      getDocs(){
+
+        const filterChatRoom = query(collectionRef, where(room,'==',this.room))
+
+        onSnapshot(filterChatRoom,(snapshot)=>{
+            Callback(snapshot)
+        })
+
+      }
+
       updatePrimaryUser(userName){
         this.primaryUser = userName
       }
