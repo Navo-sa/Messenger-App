@@ -22,3 +22,14 @@ import { getFirestore ,collection} from "https://www.gstatic.com/firebasejs/10.7
         this.subUser=subUser,
         this.room = room
     }
+
+    async addMessage(message) {
+        const msg = {
+          userName: this.primaryUser,
+          room: this.room,
+          message,
+          time: serverTimestamp()
+        };
+        const chat = await addDoc(collectionRef, msg);
+      }
+}
