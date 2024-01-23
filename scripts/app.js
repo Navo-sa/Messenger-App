@@ -26,7 +26,7 @@ memButton.forEach((element) => {
     element.addEventListener('click', (e) => {
         e.preventDefault()
         const inptMem = element.innerText
-        newChat.updateMemName(inptMem)
+        newChat.updateSubUser(inptMem)
         getChatMem((snapshot) => {
             newUi.render(snapshot)
         })
@@ -36,6 +36,6 @@ memButton.forEach((element) => {
 inptMsg.addEventListener('click', (e) => {
     e.preventDefault()
     const inptMessage = inptMsg.inputmsg.value
-    newChat.addChat(inptMessage)
+    newChat.addMessage(inptMessage)
 })
 
