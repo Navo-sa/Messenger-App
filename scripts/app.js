@@ -6,7 +6,7 @@ const room = document.querySelectorAll('.but1')
 const memButton = document.querySelectorAll('.memberbutton')
 const display = document.querySelector('.messgebody')
 const inptMsg = document.querySelector('.msg')
-const inptUser = document.querySelector('#registrationForm')
+const inptUser = document.querySelector('.addName')
 
 const newChat = new chats('Charitha', 'Shanaka', 'General')
 const newUi = new ui(display)
@@ -44,7 +44,7 @@ inptMsg.addEventListener('click', (e) => {
     inptMsg.reset()
 })
 
-inptUser.enter.addEventListener('click', (e) => {
+inptUser.btn.addEventListener('click', (e) => {
     e.preventDefault()
     const newN = inptUser.username.value
     if (userList.includes(newN)) {
