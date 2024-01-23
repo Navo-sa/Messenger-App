@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 29c549995baf0a4d8a2dc491607156d616996ee3
 /* 
 colure code {
   main colure = 2D3250;
@@ -10,9 +7,8 @@ colure code {
   4th one =F6B17A
 } */
 
-<<<<<<< HEAD
 body {
-  background-image: url(tiles.jpg);
+  background-image: url(tiles.jpg));
   padding: 50px;
   font-family: 'CustomFont', sans-serif;
   
@@ -207,7 +203,6 @@ background:hsl(120 75% 50% / 1);
 }
 .messgebody::-webkit-scrollbar-thumb{
 background: hsl(120 100% 10% / 1) ;
-=======
 
 body {
     background-color: #ffffff;
@@ -374,4 +369,3 @@ body {
   font-size: 16px;
   font-weight: 700;
 }
->>>>>>> 29c549995baf0a4d8a2dc491607156d616996ee3
