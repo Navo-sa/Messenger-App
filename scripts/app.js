@@ -1,4 +1,4 @@
-import { Chats } from './chat.js'
+import { chats } from './chat.js'
 import { ui } from './ui.js'
 
 
@@ -6,9 +6,13 @@ const room = document.querySelectorAll('.but1')
 const memButton = document.querySelectorAll('.memberbutton')
 const display = document.querySelector('.messgebody')
 const inptMsg = document.querySelector('.sendmessage')
+const inptUser = document.querySelector('.inptUser')
 
-const newChat = new Chats('Charitha', 'Shanaka', 'General')
+const newChat = new chats('Charitha', 'Shanaka', 'General')
 const newUi = new ui(display)
+
+
+const userList = ["Shanaka", "Shan", "Dilini", "Navodhya", "Sangeeth", "Manoj", "Charitha", "Amali", "Umesha"]
 
 
 room.forEach((element) => {
@@ -37,5 +41,17 @@ inptMsg.addEventListener('click', (e) => {
     e.preventDefault()
     const inptMessage = inptMsg.inputmsg.value
     newChat.addMessage(inptMessage)
+    inptMsg.reset()
+})
+
+inptUser.enter.addEventListener('click', (e) => {
+    e.preventDefault()
+    const newN = inptUser.userN.value
+    if (userList.includes(newN)) {
+        newChat.updatePrimaryUser(newN)
+    } else {
+        alert('you are not authorized')
+    }
+    inptUser.reset()
 })
 
