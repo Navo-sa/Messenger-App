@@ -5,8 +5,8 @@ import { ui } from './ui.js'
 const room = document.querySelectorAll('.but1')
 const memButton = document.querySelectorAll('.memberbutton')
 const display = document.querySelector('.messgebody')
-const inptMsg = document.querySelector('.sendmessage')
-const inptUser = document.querySelector('.inptUser')
+const inptMsg = document.querySelector('.msg')
+const inptUser = document.querySelector('#registrationForm')
 
 const newChat = new chats('Charitha', 'Shanaka', 'General')
 const newUi = new ui(display)
@@ -20,7 +20,7 @@ room.forEach((element) => {
         e.preventDefault()
         const inptRoom = element.innerText
         newChat.updateRoom(inptRoom)
-        getChatRoom((snapshot) => {
+        newChat.getChatRoom((snapshot) => {
             newUi.render(snapshot)
         })
     })
@@ -31,7 +31,7 @@ memButton.forEach((element) => {
         e.preventDefault()
         const inptMem = element.innerText
         newChat.updateSubUser(inptMem)
-        getFilteredChats((snapshot) => {
+        newChat.getFilteredChats((snapshot) => {
             newUi.render(snapshot)
         })
     })
@@ -46,7 +46,7 @@ inptMsg.addEventListener('click', (e) => {
 
 inptUser.enter.addEventListener('click', (e) => {
     e.preventDefault()
-    const newN = inptUser.userN.value
+    const newN = inptUser.username.value
     if (userList.includes(newN)) {
         newChat.updatePrimaryUser(newN)
     } else {
