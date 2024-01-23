@@ -16,7 +16,7 @@ import { getFirestore ,collection,addDoc,getDocs,onSnapshot} from "https://www.g
   const db = getFirestore();
   const collectionRef = collection(db, "chats");
 
-  class Chats {
+  export class chats {
     constructor(primaryUser,subUser,room){
         this.primaryUser=primaryUser,
         this.subUser=subUser,
