@@ -1,0 +1,135 @@
+
+/* 
+colure code {
+  main colure = 2D3250;
+  secound colure = 424769
+  third =7077A1
+  4th one =F6B17A
+} */
+
+
+body {
+    background-color: #ffffff;
+    padding: 50px;
+    font-family: 'CustomFont', sans-serif;
+    
+  }
+  button{
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+  }
+  button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  }
+
+  input{
+    border: none;
+  }
+
+  .mbody{
+    background-color: darkcyan;
+    padding: 20px;
+    padding-bottom: 100px;
+    padding-top: 50px;
+    border-radius: 20px;
+    box-shadow: white;
+    box-shadow: 5px 5px 10px gray;
+ 
+   
+  }
+  
+
+  .topbar {
+    background-color: #FFDD95;
+    border-radius: 20px;
+    display: flex;
+    padding: 20px 10px 20px 10px;
+    margin-top: 0px;
+   
+    
+  }
+
+ 
+  .but1{
+    padding: 8px 25px 8px 25px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #86A7FC;
+    margin-left: 20px;
+    
+  }
+
+  .but1:hover{
+    background-color: #7077A1(120, 120, 255);
+  }
+
+  .memberbutton {
+
+    margin-top: 10px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    background-color: #F0EDCF;
+
+  }
+
+  
+  .memberbutton:hover {
+
+    margin-top: 10px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    background-color: #fff8b0;
+
+  }
+
+  .memberbuttontext{
+   color: rgb(22, 22, 22);
+   font-size: 16px;
+   font-weight: 700;
+  }
+
+  
+
+  .messgebody{
+    background-color: aliceblue;
+    margin-left: 30px;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+
+  .secoundbody{
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  .sendmessage{
+    margin-right: 130px;
+
+  }
+
+  .sendmessgebutton{
+    border-radius: 10px;
+    background-color: #3468C0;
+  }
+
+.inputsend{
+  border-radius: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  background-color:#d8deff ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.inputsend:hover{
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sendmessgetext{
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 700;
+}
