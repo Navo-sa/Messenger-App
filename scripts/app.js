@@ -1,4 +1,4 @@
-import { chat } from './chat.js'
+import { Chats } from './chat.js'
 import { ui } from './ui.js'
 
 
@@ -7,7 +7,7 @@ const memButton = document.querySelectorAll('.memberbutton')
 const display = document.querySelector('.messgebody')
 const inptMsg = document.querySelector('.sendmessage')
 
-const newChat = new chat('Charitha', 'Shanaka', 'General')
+const newChat = new Chats('Charitha', 'Shanaka', 'General')
 const newUi = new ui(display)
 
 
@@ -27,7 +27,7 @@ memButton.forEach((element) => {
         e.preventDefault()
         const inptMem = element.innerText
         newChat.updateSubUser(inptMem)
-        getChatMem((snapshot) => {
+        getFilteredChats((snapshot) => {
             newUi.render(snapshot)
         })
     })
