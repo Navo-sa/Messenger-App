@@ -32,7 +32,14 @@
  <!--Users-->
 
             <div class="row  secoundbody justify-content-center col-12">
-                <div class=" row col-2  list-group " name="Users">          
+                
+                <div class=" row col-2  list-group " name="Users"> 
+                    
+                    <form id="registrationForm" onsubmit="addUser(); return false;">
+                    <label for="username">User Name:</label>
+                   <input type="text" id="username" name="username" required>
+                   <button type="submit"> Log In</button>
+                    </form>         
                         <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>  
                         <button class="memberbutton"><h1 class="memberbuttontext">Shanaka</h1> </button>
                         <button class="memberbutton"><h1 class="memberbuttontext">Dilini</h1></button>
@@ -52,11 +59,14 @@
                   
                 </div>
                  <!--New message input-->
-                <div class=" sendmessage d-flex justify-content-end mt-3">
-                    
-                    <input type="text" class="  inputsend col-7 py-3" name =inputmsg ></input>
-                    <button class="col-2 py-3  sendmessgebutton  ">send messge </button>
-                 </div>
+                <div class=" sendmessage input-group d-flex justify-content-end mt-3">
+                    <form class="msg input-group my-4">  
+                    <input type="text" class="  inputsend col-6 py-3" name ="inputmsg" ></input>
+                    <button class="col-2 py-3  sendmessgebutton " name ="send">send messge </button>
+                </form>
+                </div>
+               
+                
                  </div>
 
                
