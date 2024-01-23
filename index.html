@@ -9,7 +9,7 @@
     <script type="module" src="./scripts/app.js" defer></script>
     <script type="module" src="./scripts/chat.js" defer></script>
     <script type="module" src="./scripts/ui.js" defer></script>
-   <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
 
 
     <title>Chat app</title>
@@ -33,12 +33,22 @@
 
             <div class="row  secoundbody justify-content-center col-12">
                 <div class=" row col-2  list-group ">          
-                        <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>  
-                        <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1> </button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>              
+                    <form class="addName" id="registrationForm">
+                        <label for="username">User Name:</label>
+                       <input type="text" id="username" name="username" required>
+                       <button type="submit" name="btn"> Log In</button>
+                        </form>         
+                            <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>  
+                            <button class="memberbutton"><h1 class="memberbuttontext">Shanaka</h1> </button>
+                            <button class="memberbutton"><h1 class="memberbuttontext">Dilini</h1></button>
+                            <button class="memberbutton"><h1 class="memberbuttontext">Sangeeth</h1></button>
+                            <button class="memberbutton"><h1 class="memberbuttontext">Amali</h1></button>
+                            <button class="memberbutton"><h1 class="memberbuttontext">Shan</h1></button>
+                            <button class="memberbutton"><h1 class="memberbuttontext">Navoda</h1></button>
+                            <button class="memberbutton"><h1 class="memberbuttontext">Manoj</h1></button>
+                            <button class="memberbutton"><h1 class="memberbuttontext">Charitha</h1></button>
+                            
+           
                 </div>
 
                 <div class=" messgebody col-9  pt-4 py-2">
@@ -69,11 +79,17 @@
 
                   
                 </div>
-                <div class=" sendmessage d-flex justify-content-end mt-3">
+                <div class=" sendmessage input-group d-flex justify-content-end mt-3">
+                    <form class="msg input-group my-4">  
+                    <input type="text" class="  inputsend col-6 py-3" name ="inputmsg" ></input>
+                    <button class="col-2 py-3  sendmessgebutton " name ="send">send messge </button>
+                </form>
+                </div>
+                <!-- <div class=" sendmessage d-flex justify-content-end mt-3">
                     
                     <input type="text" class="  inputsend col-8 py-3  "></input>
                     <button class="col-1 py-3  sendmessgebutton  "><h1 class="sendmessgetext">send messge </h1></button>
-                 </div>
+                 </div> -->
                  </div>
 
                
@@ -85,15 +101,15 @@
  <!--New message input-->
   
 
-            <div class="row  secoundbody justify-content-center col-12">
+            <!-- <div class="row  secoundbody justify-content-center col-12">
                 
-                <div class=" row col-2  list-group " name="Users"> 
+                <div class=" row col-2  list-group my-4 " name="Users"> 
                     
-                    <form id="registrationForm">
-                
-                   <input type="text" id="username" name="username" placeholder="Enter your Name" required>
-                   <button type="submit" class="login" name="login"> Login</button>
-                    </form>         
+                    <form id="registrationForm" onsubmit="addUser(); return false;">
+                    <label for="username">User Name:</label>
+                   <input type="text" id="username" name="username" required>
+                   <button type="submit"> Log In</button> -->
+                    <!-- </form>         
                         <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>  
                         <button class="memberbutton"><h1 class="memberbuttontext">Shanaka</h1> </button>
                         <button class="memberbutton"><h1 class="memberbuttontext">Dilini</h1></button>
@@ -102,31 +118,30 @@
                         <button class="memberbutton"><h1 class="memberbuttontext">Shan</h1></button>
                         <button class="memberbutton"><h1 class="memberbuttontext">Navoda</h1></button>
                         <button class="memberbutton"><h1 class="memberbuttontext">Manoj</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Charitha</h1></button>
+                        <button class="memberbutton"><h1 class="memberbuttontext">Charitha</h1></button> -->
                         
 
-                </div>
+                <!-- </div>
                 <!--chat window-->
-                <div class=" messgebody col-9 ">
-                    
+                <!-- <div class=" messgebody col-9  ">
 
-                </div> 
+
                   
-                
+                </div> -->
                  <!--New message input-->
-                <div class=" sendmessage input-group">
-                    <form class="msg input-group my-4 justify-content-end" name="msg">  
-                    <input type="text" class=" inputsend col-6 py-3 justify-content-end name" name ="inputmsg" placeholder=" Enter your message here" required ></input>
-                    <button class="col-2 py-3  sendmessgebutton " name ="send">send </button>
+                <!-- <div class=" sendmessage input-group d-flex justify-content-end mt-3">
+                    <form class="msg input-group my-4">  
+                    <input type="text" class="  inputsend col-6 py-3" name ="inputmsg" ></input>
+                    <button class="col-2 py-3  sendmessgebutton " name ="send">send messge </button>
                 </form>
-                </div>
+                </div> -->
                
                 
                  </div>
 
                
             </div>
-       
+    
 
 </body>
 </html> 
