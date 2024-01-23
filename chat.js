@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-import { getFirestore ,collection,addDoc,getDocs,onSnapshot} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+import { getFirestore ,collection,addDoc,getDocs,  query, where,onSnapshot} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyC-q2I2cKK_TuFI5gh2wEvNE-vxTdj80K0",
@@ -33,24 +33,21 @@ import { getFirestore ,collection,addDoc,getDocs,onSnapshot} from "https://www.g
         const chat = await addDoc(collectionRef, msg);
       }
 
-       getDocs(){
+     getFilteredChats(Callback) {
+    const filterChats = query(collectionRef, where("userName", '==', this.subUser), where("room", '==', this.room));
 
-        const filterChats = query(collectionRef, where(userName,'==',this.subUser),where(room,'==',this.room))
-
-        onSnapshot(filterChats,(snapshot)=>{
-            Callback(snapshot)
-        })
+    onSnapshot(filterChats, (snapshot) => {
+      Callback(snapshot);
+    });
 
       }
 
-      getDocs(){
+     getChatRoom(Callback) {
+    const filterChatRoom = query(collectionRef, where("room", '==', this.room));
 
-        const filterChatRoom = query(collectionRef, where(room,'==',this.room))
-
-        onSnapshot(filterChatRoom,(snapshot)=>{
-            Callback(snapshot)
-        })
-
+    onSnapshot(filterChatRoom, (snapshot) => {
+      Callback(snapshot);
+    });
       }
 
       updatePrimaryUser(userName){
