@@ -33,24 +33,21 @@ import { getFirestore ,collection,addDoc,getDocs,  query, where,onSnapshot} from
         const chat = await addDoc(collectionRef, msg);
       }
 
-       getDocs(){
+     getFilteredChats(Callback) {
+    const filterChats = query(collectionRef, where("userName", '==', this.subUser), where("room", '==', this.room));
 
-        const filterChats = query(collectionRef, where(userName,'==',this.subUser),where(room,'==',this.room))
-
-        onSnapshot(filterChats,(snapshot)=>{
-            Callback(snapshot)
-        })
+    onSnapshot(filterChats, (snapshot) => {
+      Callback(snapshot);
+    });
 
       }
 
-      getDocs(){
+     getChatRoom(Callback) {
+    const filterChatRoom = query(collectionRef, where("room", '==', this.room));
 
-        const filterChatRoom = query(collectionRef, where(room,'==',this.room))
-
-        onSnapshot(filterChatRoom,(snapshot)=>{
-            Callback(snapshot)
-        })
-
+    onSnapshot(filterChatRoom, (snapshot) => {
+      Callback(snapshot);
+    });
       }
 
       updatePrimaryUser(userName){
