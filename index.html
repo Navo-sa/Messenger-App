@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <script type="module" src="./scripts/app.js" defer></script>
-    <script type="module" src="./scripts/chat.js" defer></script>
+    <script type="module" src="./chat.js" defer></script>
     <script type="module" src="./scripts/ui.js" defer></script>
     <link rel="stylesheet" href="style.css">
 
@@ -17,130 +17,88 @@
 </head>
 
 <body >
-    <div class="mbody justify-content-center">
-        <div class="heading d-flex justify-content-center">
-         <!--Rooms-->
-        <div class=" topbar d-flex justify-content-center col-11">   
-                        <h3 class="chatHead">Web Enthusiastics Hangout</h3>
-                        <button type="button" class="but1 ">General</button>
-                        <button type="button" class=" but1 ">Project</button>
-                        <button type="button" class=" but1">Info</button>
-                        <button type="button" class=" but1" >Links</button>  
-        </div>
-         </div>
-       
- <!--Users-->
-
-            <div class="row  secoundbody justify-content-center col-12">
-                <div class=" row col-2  list-group ">          
-                    <form class="addName" id="registrationForm">
-                        <label for="username">User Name:</label>
-                       <input type="text" id="username" name="username" required>
-                       <button type="submit" name="btn"> Log In</button>
-                        </form>         
-                            <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>  
-                            <button class="memberbutton"><h1 class="memberbuttontext">Shanaka</h1> </button>
-                            <button class="memberbutton"><h1 class="memberbuttontext">Dilini</h1></button>
-                            <button class="memberbutton"><h1 class="memberbuttontext">Sangeeth</h1></button>
-                            <button class="memberbutton"><h1 class="memberbuttontext">Amali</h1></button>
-                            <button class="memberbutton"><h1 class="memberbuttontext">Shan</h1></button>
-                            <button class="memberbutton"><h1 class="memberbuttontext">Navoda</h1></button>
-                            <button class="memberbutton"><h1 class="memberbuttontext">Manoj</h1></button>
-                            <button class="memberbutton"><h1 class="memberbuttontext">Charitha</h1></button>
-                            
+    <div class="container">
+        <div class="mbody justify-content-center">
+            <div class="heading d-flex justify-content-center">
+             <!--Rooms-->
+            <div class=" topbar d-flex justify-content-center col-11">   
+                            <h3 class="chatHead">Web Enthusiastics Hangout</h3>
+                            <button type="button" class="but1 ">General</button>
+                            <button type="button" class=" but1 ">Project</button>
+                            <button type="button" class=" but1">Info</button>
+                            <button type="button" class=" but1" >Links</button>  
+            </div>
+             </div>
            
-                </div>
-
-                <div class=" messgebody col-9  pt-4 py-2">
-                 
-                <div>  
-                    <div class="d-flex justify-content-end mb4">
-                        <span class="mesagename"> Manoj</span>
-                        <div class="msg_cotainer_send">
-                            You are welcome
-                            <span class="msg_time_send">9:05 AM, Today</span>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="d-flex justify-content-start mb-4"> 
-                        <div class="">
-                        <span class="mesagename pl-5"> Manoj</span>
-                           <div class="msg_cotainer">
-                            I am good too, 
-                            <span class="msg_time">9:00 AM, Today</span>
-                        </div>
-                    </div>
-                    </div>
-                
-                    </div>
-                </div> 
-
-
-                  
-                </div>
-                <div class=" sendmessage input-group d-flex justify-content-end mt-3">
-                    <form class="msg input-group my-4">  
-                    <input type="text" class="  inputsend col-6 py-3" name ="inputmsg" ></input>
-                    <button class="col-2 py-3  sendmessgebutton " name ="send">send messge </button>
-                </form>
-                </div>
-                <!-- <div class=" sendmessage d-flex justify-content-end mt-3">
-                    
-                    <input type="text" class="  inputsend col-8 py-3  "></input>
-                    <button class="col-1 py-3  sendmessgebutton  "><h1 class="sendmessgetext">send messge </h1></button>
-                 </div> -->
-                 </div>
-
-               
-            </div>
+     <!--Users-->
     
-<!--chat window-->
-
-
- <!--New message input-->
-  
-
-            <!-- <div class="row  secoundbody justify-content-center col-12">
-                
-                <div class=" row col-2  list-group my-4 " name="Users"> 
-                    
-                    <form id="registrationForm" onsubmit="addUser(); return false;">
-                    <label for="username">User Name:</label>
-                   <input type="text" id="username" name="username" required>
-                   <button type="submit"> Log In</button> -->
-                    <!-- </form>         
-                        <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>  
-                        <button class="memberbutton"><h1 class="memberbuttontext">Shanaka</h1> </button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Dilini</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Sangeeth</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Amali</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Shan</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Navoda</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Manoj</h1></button>
-                        <button class="memberbutton"><h1 class="memberbuttontext">Charitha</h1></button> -->
-                        
-
-                <!-- </div>
-                <!--chat window-->
-                <!-- <div class=" messgebody col-9  ">
-
-
-                  
-                </div> -->
-                 <!--New message input-->
-                <!-- <div class=" sendmessage input-group d-flex justify-content-end mt-3">
-                    <form class="msg input-group my-4">  
-                    <input type="text" class="  inputsend col-6 py-3" name ="inputmsg" ></input>
-                    <button class="col-2 py-3  sendmessgebutton " name ="send">send messge </button>
-                </form>
-                </div> -->
-               
-                
-                 </div>
-
-               
+     <div class="row mt-4">
+        <div class="col-3">
+            <form class="addName" id="registrationForm">
+                <label for="username">User Name:</label>
+                <input type="text" id="username" name="username" class="form-control mb-2" required>
+                <button class="btn btn-primary" type="submit" name="btn">Log In</button>
+            </form> 
+            
+            <div class="list-group">
+                                <button class="memberbutton"><h1 class="memberbuttontext">Umesha</h1></button>  
+                                <button class="memberbutton"><h1 class="memberbuttontext">Shanaka</h1> </button>
+                                <button class="memberbutton"><h1 class="memberbuttontext">Dilini</h1></button>
+                                <button class="memberbutton"><h1 class="memberbuttontext">Sangeeth</h1></button>
+                                <button class="memberbutton"><h1 class="memberbuttontext">Amali</h1></button>
+                                <button class="memberbutton"><h1 class="memberbuttontext">Shan</h1></button>
+                                <button class="memberbutton"><h1 class="memberbuttontext">Navoda</h1></button>
+                                <button class="memberbutton"><h1 class="memberbuttontext">Manoj</h1></button>
+                                <button class="memberbutton"><h1 class="memberbuttontext">Charitha</h1></button>
+                                
             </div>
+                                
+               
+                    </div>
+
+                    
+    
+                    <div class="col-9 my-3">
+                        <div class="messgebody pt-4 py-2 my-5">
+                            <div class="d-flex justify-content-end mb-4">
+                                <span class="mesagename">Manoj</span>
+                                <div class="msg_cotainer_send">
+                                    You are welcome
+                                    <span class="msg_time_send">9:05 AM, Today</span>
+                                </div>
+                            </div>
+        
+                            <div class="d-flex justify-content-start mb-4"> 
+                                <div>
+                                    <span class="mesagename">Manoj</span>
+                                    <div class="msg_cotainer">
+                                        I am good too, 
+                                        <span class="msg_time">9:00 AM, Today</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sendmessage input-group mt-3">
+                            <form class="msg input-group">
+                                <input type="text" class="form-control" name="inputmsg">
+                                <button class="btn btn-primary" name="send">Send Message</button>
+                            </form>
+                        </div>
+    
+                      
+                    </div>
+                    
+                    
+                     </div>
+    
+                   
+                </div>
+                
+    
+                   
+                </div>
+        
+    </div>
     
 
 </body>

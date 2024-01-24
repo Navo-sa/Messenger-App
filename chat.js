@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-import { getFirestore ,collection,addDoc,getDocs,  query, where,onSnapshot,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+import { getFirestore , collection, addDoc, query, where, onSnapshot, serverTimestamp} from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyC-q2I2cKK_TuFI5gh2wEvNE-vxTdj80K0",
@@ -31,24 +31,23 @@ import { getFirestore ,collection,addDoc,getDocs,  query, where,onSnapshot,serve
           time: serverTimestamp()
         };
         const chat = await addDoc(collectionRef, msg);
+        return chat;
       }
 
-     getFilteredChats(Callback) {
-    const filterChats = query(collectionRef, where("userName", '==', this.subUser), where("room", '==', this.room));
+      getFilteredChats(filterName,Callback){
+        let q=''
 
-    onSnapshot(filterChats, (snapshot) => {
-      Callback(snapshot);
-    });
-
+        const users=[`${this.subUser}`,`${filterName}`]
+        console.log(users)
+        if(filterName) q = query(collectionRef,where('room',"==",`${this.room}`),where("userName","in",users), orderBy('created_at','asc'))
+        else q = query(collectionRef,where('room',"==",`${this.room}`), orderBy('created_at','asc'))
+      
+        onSnapshot(q,(snapshot)=>{
+          console.log(snapshot.docs)
+          Callback(snapshot)
+        })
       }
 
-     getChatRoom(Callback) {
-    const filterChatRoom = query(collectionRef, where("room", '==', this.room));
-
-    onSnapshot(filterChatRoom, (snapshot) => {
-      Callback(snapshot);
-    });
-      }
 
       updatePrimaryUser(userName){
         this.primaryUser = userName
