@@ -1,4 +1,4 @@
-import { chats } from './chat.js'
+import { chats } from '../chat.js'
 import { ui } from './ui.js'
 
 
@@ -15,14 +15,20 @@ const newUi = new ui(display)
 const userList = ["Shanaka", "Shan", "Dilini", "Navodhya", "Sangeeth", "Manoj", "Charitha", "Amali", "Umesha"]
 
 
+const updateChats = (member) => {
+    newChat.getFilteredChats(member, (snapshot) => {
+
+        newUi.render(snapshot);
+
+    });
+}
+
 room.forEach((element) => {
     element.addEventListener('click', (e) => {
         e.preventDefault()
         const inptRoom = element.innerText
         newChat.updateRoom(inptRoom)
-        newChat.getChatRoom((snapshot) => {
-            newUi.render(snapshot)
-        })
+        updateChats()
     })
 })
 
@@ -31,13 +37,11 @@ memButton.forEach((element) => {
         e.preventDefault()
         const inptMem = element.innerText
         newChat.updateSubUser(inptMem)
-        newChat.getFilteredChats((snapshot) => {
-            newUi.render(snapshot)
-        })
+        updateChats(inptMem)
     })
 })
 
-inptMsg.addEventListener('click', (e) => {
+inptMsg.send.addEventListener('click', (e) => {
     e.preventDefault()
     const inptMessage = inptMsg.inputmsg.value
     newChat.addMessage(inptMessage)
