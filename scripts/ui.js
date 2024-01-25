@@ -15,10 +15,12 @@ export class ui {
                     </p>`
         this.displayChat.innerHTML = query
         chatArray.forEach((element) => {
-            query = `<p>
-                            <span>${element.userName}</span>
-                            <span>${element.message}</span>
-              </p>`
+            query = `<div class="d-flex justify-content-start mb-4">
+                    <span class="mesagename">${element.userName}</span>
+                    <div class="msg_cotainer">
+                      ${element.message}
+                    </div>
+                </div>`
             this.displayChat.innerHTML += query
         })
     }
