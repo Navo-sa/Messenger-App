@@ -1,46 +1,41 @@
+body{
 
-/* 
-colure code {
-  main colure = 2D3250;
-  secound colure = 424769
-  third =7077A1
-  4th one =F6B17A
-} */
-
-body {
-  background-image: url(tiles.jpg);
   padding: 50px;
   font-family: 'CustomFont', sans-serif;
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
 }
 button{
   border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
  
 }
-button:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+button{
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ 
 }
-
 input{
   border: none;
+  background-color: #2424c2;
 }
-
 .mbody{
-  background-color: darkcyan;
-  padding: 20px;
+
+   background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(30,6,108,1) 0%, rgba(205,72,198,1) 0%, rgba(190,125,197,1) 0%, rgba(196,77,200,1) 0%, rgba(106,191,241,1) 97%, rgb(146, 211, 241) 100%, rgba(0,185,255,1) 100%); */
+  padding-right: 20px;
   padding-bottom: 100px;
   padding-top: 50px;
   border-radius: 20px;
   box-shadow: white;
-  box-shadow: 5px 5px 10px gray;
-
- 
+  box-shadow: 5px 5px 10px rgb(108, 107, 107);
 }
-
-
 .topbar {
-  background-color: #FFDD95;
+  background: rgb(200,116,235);
+  background: linear-gradient(90deg, rgba(200,116,235,1) 27%, rgba(24,18,95,1) 70%);
   border-radius: 20px;
   display: flex;
   padding: 20px 10px 20px 10px;
@@ -48,114 +43,98 @@ input{
  
   
 }
-
-
 .but1{
   padding: 8px 25px 8px 25px;
   border-radius: 10px;
   margin-left: 10px;
-  background-color: #86A7FC;
+  background-color: #3167f1;
   margin-left: 20px;
+   color: white;
+ 
+
+}
+.but1:hover{
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+  background-color: rgba(104, 85, 224, 1);
   
 }
-
-.but1:hover{
-  background-color: #7077A1(120, 120, 255);
-}
-
 #username{
-border-radius: 10px;
-margin-left: 10px;
-padding-right: 10px;
-margin-right: 10px;
-background-color:#d8deff ;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-
-}
-.login{
-  padding: 8px 25px 8px 25px;
   border-radius: 10px;
-  margin-top: 8px;
-  margin-left: 50px;
-  background-color: #86A7FC;
- 
-}
-
-
-.memberbutton {
-
-  margin-top: 10px;
-  padding: 15px 30px 15px 30px;
-  border-radius: 10px;
-  background-color: #F0EDCF;
-
-}
-
-
-.memberbutton:hover {
-
-  margin-top: 10px;
-  padding: 15px 30px 15px 30px;
-  border-radius: 10px;
-  background-color: #fff8b0;
-
-}
-
-.memberbuttontext{
- color: rgb(22, 22, 22);
- font-size: 16px;
- font-weight: 700;
-}
-
-.mesagename {
-  font-weight: bold;
-}
-
-.messgebody{
-  background-color: aliceblue;
   margin-left: 30px;
-  border-radius: 20px;
-  padding-bottom: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 500px;
-  max-height: 500px;
-  overflow-y: scroll;
-}
+  padding-right: 10px;
+  margin-right: 10px;
+  background-color:#d8deff ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  
+  }
+  .login{
+    border-radius: 10px;
+    margin-left: 30px;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+  .memberbutton {
+    margin-left: 40px;
+    margin-top: 10px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 10px;
+    background: rgb(90,7,125);
+    background: linear-gradient(90deg, rgba(90,7,125,1) 14%, rgba(24,18,95,1) 58%);
+  
+  }
+  .memberbutton:hover {
+    box-shadow: 0 0 20px rgba(219, 215, 15, 0.6);
+    background-color: rgb(223, 134, 26);
+  
+  }
 
+  .memberbuttontext{
+    color: rgb(238, 231, 231);
+    font-size: 16px;
+    font-weight: 700;
+    
+   }
+   
+   .mesagename {
+     font-weight: bold;
+     margin-left: 30px;
+   }
+   .messgebody{
+    background-color: aliceblue;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(37, 30, 30, 0.1);
+    height: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
+    border-color: rgb(77, 8, 195);
+  }
+  
 .msg_time {
   position: absolute;
   left: 0;
   bottom: -15px;
-  color: rgb(0, 153, 255);
+  color: rgb(44, 144, 210);
   font-size: 10px;
 }
-
 .msg_time_send {
-  position: absolute;
+   position: absolute;
   right: 0;
   bottom: -15px;
   color: rgb(0, 153, 255);
-  font-size: 10px;
+  font-size: 10px; 
 }
-
 .msg_cotainer {
-  margin-top: auto;
-  margin-bottom: auto;
   margin-left: 10px;
   border-radius: 25px;
   background-color: #82ccdd;
-  padding: 10px;
+  padding: 4px;
   position: relative;
 }
-
 .msg_cotainer_send {
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 10px;
-  border-radius: 25px;
-  background-color: #78e08f;
-  padding: 10px;
-  position: relative;
+
 }
 
 .secoundbody{
@@ -163,210 +142,44 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding-bottom: 50px;
   
 }
+.btn{
+  background-color: #8a48e0;
+  margin-left: 140px;
+  color: rgb(255, 255, 255);
+  
+}
+.username{
+  padding-left: 40px;
+}
 
 .sendmessage{
   margin-right: 130px;
 
 }
-
 .sendmessgebutton{
   border-radius: 10px;
   background-color: #3468C0;
   width: 75px;
 }
 
-.inputsend{
-border-radius: 10px;
-margin-left: 10px;
-padding-right: 10px;
-margin-right: 10px;
-background-color:#d8deff ;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-max-width: 65%;
-width: 65%;
-}
-
-.inputsend:hover{
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.sendmessgetext{
-color: rgb(255, 255, 255);
-font-size: 16px;
-font-weight: 700;
-}
-.messgebody::-webkit-scrollbar{
-width: 1em;
-}
-.messgebody::-webkit-scrollbar-track{
-background:hsl(120 75% 50% / 1);
-}
-.messgebody::-webkit-scrollbar-thumb{
-background: hsl(120 100% 10% / 1) ;
-}
-
-body {
-    background-color: #ffffff;
-    padding: 50px;
-    font-family: 'CustomFont', sans-serif;
-    
-  }
-  button{
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-   
-  }
-  button:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-  }
-
-  input{
-    border: none;
-  }
-
-  .mbody{
-    background-color: darkcyan;
-    padding: 20px;
-    padding-bottom: 100px;
-    padding-top: 50px;
-    border-radius: 20px;
-    box-shadow: white;
-    box-shadow: 5px 5px 10px gray;
- 
-   
-  }
-  
-
-  .topbar {
-    background-color: #FFDD95;
-    border-radius: 20px;
-    display: flex;
-    padding: 20px 10px 20px 10px;
-    margin-top: 0px;
-   
-    
-  }
-
- 
-  .but1{
-    padding: 8px 25px 8px 25px;
-    border-radius: 10px;
-    margin-left: 10px;
-    background-color: #86A7FC;
-    margin-left: 20px;
-    
-  }
-
-  .but1:hover{
-    background-color: #7077A1(120, 120, 255);
-  }
-
-  .memberbutton {
-
-    margin-top: 10px;
-    padding: 15px 30px 15px 30px;
-    border-radius: 10px;
-    background-color: #F0EDCF;
-
-  }
-
-  
-  .memberbutton:hover {
-
-    margin-top: 10px;
-    padding: 15px 30px 15px 30px;
-    border-radius: 10px;
-    background-color: #fff8b0;
-
-  }
-
-  .memberbuttontext{
-   color: rgb(22, 22, 22);
-   font-size: 16px;
-   font-weight: 700;
-  }
-
-  .mesagename {
-    font-weight: bold;
-}
-
-  .messgebody{
-    background-color: aliceblue;
-    margin-left: 30px;
-    border-radius: 20px;
-    padding-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 600px;
-    max-height: 400px;
-
-  }
-
-  .msg_time {
-    position: absolute;
-    left: 0;
-    bottom: -15px;
-    color: rgb(0, 153, 255);
-    font-size: 10px;
-  }
-
-  .msg_time_send {
-    position: absolute;
-    right: 0;
-    bottom: -15px;
-    color: rgb(0, 153, 255);
-    font-size: 10px;
-  }
-
-  .msg_cotainer {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 10px;
-    border-radius: 25px;
-    background-color: #82ccdd;
-    padding: 10px;
-    position: relative;
-  }
-  
-  .msg_cotainer_send {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 10px;
-    border-radius: 25px;
-    background-color: #78e08f;
-    padding: 10px;
-    position: relative;
-  }
-
-  .secoundbody{
-    padding-top: 40px;
-    padding-bottom: 50px;
-  }
-
-  .sendmessage{
-    margin-right: 130px;
-
-  }
-
-  .sendmessgebutton{
-    border-radius: 10px;
-    background-color: #3468C0;
-  }
-
-.inputsend{
+ .inputsend{
   border-radius: 10px;
   margin-left: 10px;
   padding-right: 10px;
   margin-right: 10px;
   background-color:#d8deff ;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+  max-width: 65%;
+  width: 65%;
+  } 
 
-.inputsend:hover{
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.sendmessgetext{
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  font-weight: 700;
-}
+  .inputsend:hover{
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    .sendmessgetext{
+      color: rgb(255, 255, 255);
+      font-size: 16px;
+      font-weight: 700;
+      }
+      
+     
