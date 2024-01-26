@@ -37,7 +37,7 @@ export class chats {
   getFilteredChats(filterName, Callback) {
     let q = ''
 
-    const users = [`${this.subUser}`, `${filterName}`]
+    const users = [`${this.primaryUser}`, `${filterName}`]
     console.log(users)
     if (filterName) q = query(collectionRef, where('room', "==", `${this.room}`), where("userName", "in", users), orderBy('time', 'asc'))
     else q = query(collectionRef, where('room', "==", `${this.room}`), orderBy('time', 'asc'))
